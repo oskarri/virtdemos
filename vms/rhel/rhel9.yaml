@@ -14,11 +14,11 @@ spec:
           namespace: openshift-virtualization-os-images
         storage:
           accessModes:
-            - ReadWriteMany
+            - ReadWriteOnce # Geändert von ReadWriteMany auf ReadWriteOnce
           resources:
             requests:
               storage: 30Gi
-          storageClassName: ocs-storagecluster-ceph-rbd
+          storageClassName: ocs-storagecluster-ceph-rbd # Wird jetzt durch Kustomize überschrieben
           volumeMode: Block
   instancetype:
     name: u1.medium
