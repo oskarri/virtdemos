@@ -21,7 +21,7 @@ spec:
           storageClassName: ocs-storagecluster-ceph-rbd # Wird jetzt durch Kustomize überschrieben
           volumeMode: Block
   instancetype:
-    name: u1.medium
+    name: u1.micro
   preference:
     name: rhel.9
   running: true
